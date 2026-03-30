@@ -1,0 +1,47 @@
+<%- include("layouts/header"); -%>
+<%- include("layouts/nav"); -%>
+
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Postal Code</th>
+        <th>Lunch</th>
+        <th>Tickets</th>
+        <th>Campus</th>
+        <th>Sub Total</th>
+        <th>Tax</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if(typeof(data) !== "undefined") {
+        data.forEach(order => {%>
+          <tr>
+            <td><%= order.name %></td>
+            <td><%= order.email %></td>
+            <td><%= order.phone %></td>
+            <td><%= order.postcode %></td>
+            <td><%= order.lunch %></td>
+            <td><%= order.tickets %></td>
+            <td><%= order.campus %></td>
+            <td>$<%= order.sub.toFixed(2) %></td>
+            <td>$<%= order.tax.toFixed(2) %></td>
+            <td>$<%= order.total.toFixed(2) %></td>
+          </tr>
+        <%})
+      }%>
+    </tbody>
+  </table>
+</main>
+
+<%- include("layouts/footer"); -%>
+
+
+
+
+
+

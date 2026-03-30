@@ -1,1 +1,2 @@
 # wddm130-w12-lab7
+This project uses a MongoDB database to store and retrieve order information. The data is stored through a form on the home page, also known as the Order Form page, and is retrieved into a table on the All Orders page.
